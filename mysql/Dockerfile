@@ -8,10 +8,10 @@ FROM mysql
 ENV MYSQL_ROOT_PASSWORD: mypassword
 ENV MYSQL_DATABASE: mydatabase
 
-ADD jsp_backup.sql /docker-entrypoint-initdb.d
+#ADD esquema.sql /docker-entrypoint-initdb.d
 
 
 # Add all scripts 
-COPY ./scripts/ /docker-entrypoint-initdb.d/
+COPY esquema.sql /docker-entrypoint-initdb.d/
 
 EXPOSE 3306
