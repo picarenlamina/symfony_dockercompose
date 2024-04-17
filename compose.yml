@@ -4,13 +4,15 @@ services:
     db:
        build:
             context: ./mysql
-       expose: 3306
+        ports:
+            - "3306:3306"
        networks:
             - mynetwork
     php:
         build:
             context: ./php
-        expose: 80
+         ports:
+            - "80:80"
         networks:
             - mynetwork
 networks:
