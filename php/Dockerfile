@@ -35,10 +35,10 @@ RUN php /usr/bin/composer install
 #RUN  composer require symfony/apache-pack
 
 # Actualizamos fichero de configuracion de apache para que gestione symfony
-COPY /apache/apache2.conf /etc/apache2
+COPY ./apache2.conf /etc/apache2
 
 # Copies your code to the image
-COPY /site /var/www/html
+#COPY /site /var/www/html
 
 # Declarar $PORT en railway con valor 80
 EXPOSE 80
