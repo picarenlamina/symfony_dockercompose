@@ -1,3 +1,4 @@
+# source mysql https://www.baeldung.com/ops/docker-mysql-container
 version: "3"
 services:
     mysql:
