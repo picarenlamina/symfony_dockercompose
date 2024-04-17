@@ -5,12 +5,13 @@ services:
        build:
             context: ./mysql
        networks:
-            - symfony_app
+            - mynetwork
     php:
         build:
             context: ./php
-           
-         networks:
-            - symfony_app
+        networks:
+            - mynetwork
     networks:
-        symfony_app:
+        mynetwork:
+
+              
