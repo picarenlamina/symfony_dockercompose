@@ -4,11 +4,13 @@ services:
     db:
        build:
             context: ./mysql
+       expose: 3306
        networks:
             - mynetwork
     php:
         build:
             context: ./php
+        expose: 80
         networks:
             - mynetwork
 networks:
