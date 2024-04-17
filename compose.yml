@@ -4,7 +4,7 @@ services:
     mysql:
       build:
         context: ./mysql
-        environment:
+      environment:
             - MYSQL_DATABASE=mydatabase
             - MYSQL_USER=user
             - MYSQL_PASSWORD=password
