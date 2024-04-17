@@ -6,7 +6,7 @@ services:
 		context: ./mysql
 		environment:
 			- MYSQL_DATABASE=mydatabase
-			- MYSQL_USER=fernando
+			- MYSQL_USER=user
 			- MYSQL_PASSWORD=password
 			- MYSQL_ROOT_PASSWORD=password
 	    networks:
