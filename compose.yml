@@ -11,7 +11,7 @@ services:
             context: ./php
         networks:
             - mynetwork
-    networks:
-        mynetwork:
+networks:
+    mynetwork:
 
               
