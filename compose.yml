@@ -1,12 +1,14 @@
 version: "3"
-
 services:
-    db:
-       build:
-            context: ./mysql
-       ports:
-            - "3306:3306"
-       networks:
+    mysql:
+	   build:
+		context: ./mysql
+		environment:
+			- MYSQL_DATABASE=mydatabase
+			- MYSQL_USER=fernando
+			- MYSQL_PASSWORD=password
+			- MYSQL_ROOT_PASSWORD=password
+	    networks:
             - mynetwork
     php:
         build:
@@ -17,5 +19,8 @@ services:
             - mynetwork
 networks:
     mynetwork:
+
+
+		
 
               
